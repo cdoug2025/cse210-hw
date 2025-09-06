@@ -11,7 +11,7 @@ class Program
         float inputNumber;
         do
         {
-            Console.Write("Please type a number for the list: ");
+            Console.Write("Please type a number for the list (type 0 to quit): ");
             inputNumber = float.Parse(Console.ReadLine());
             if (inputNumber != 0)
             {
