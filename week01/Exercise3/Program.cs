@@ -8,11 +8,12 @@ class Program
         string playAgain;
         do
         {
-            //generate number
+            //define range, generate number, set guesses to 1
             Console.Write("I'm thinking of a magic number between one and... ");
             int maxRange = int.Parse(Console.ReadLine());
             Random randomGenerator = new Random();
             int magicNumber = randomGenerator.Next(1, maxRange + 1);
+            int guessTimes = 1;
 
             //loop
             int guessNumber;
@@ -37,8 +38,19 @@ class Program
                 //equals
                 else if (magicNumber == guessNumber)
                 {
-                    Console.WriteLine($"You guessed it!\nThe magic number was {magicNumber}");
+                    Console.Write($"You guessed it!\nThe magic number was {magicNumber}!\nIt took you {guessTimes} ");
+                    if (guessTimes == 1)
+                    {
+                        Console.WriteLine("try!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tries!");
+                    }
                 }
+
+                //add guess
+                guessTimes += 1;
 
             } while (guessNumber != magicNumber);
 
