@@ -48,6 +48,14 @@ class Program
         }
 
         //print
-            Console.WriteLine($"\nA grade percentage of {gradePercentage}% would give a{gradeLetter}{gradeSign}");
+        Console.WriteLine($"\nWith a grade percentage of {gradePercentage}%, you get a{gradeLetter}{gradeSign}");
+        if (gradePercentage >= 70)
+        {
+            Console.WriteLine("Congratulations! You passed the class!");
+        }
+        else
+        {
+            Console.WriteLine("You didn't pass, but don't worry. You can try again next time!");
+        }
     }
 }
