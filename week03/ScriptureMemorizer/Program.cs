@@ -68,7 +68,8 @@ class Program
                 //Change how many words are hidden at a time
                 else if (memorizerInput == "2")
                 {
-                    Console.WriteLine($"Please type the number of words you would like to be hidden at once. Current: {numberToHide}");
+                    Console.WriteLine("Please type the number of words you would like to be hidden at once");
+                    Console.WriteLine($"Current: {numberToHide}");
                     numberToHide = int.Parse(Console.ReadLine());
                 }
 
@@ -128,7 +129,8 @@ class Program
                         //Change how many words are hidden at a time by default
                         else if (settingsInput == "2")
                         {
-                            Console.WriteLine($"Please type the new default number of words to hide. Current: {defaultNumberToHide}");
+                            Console.WriteLine("Please type the new default number of words to hide");
+                            Console.WriteLine($"Current: {defaultNumberToHide}");
                             defaultNumberToHide = int.Parse(Console.ReadLine());
                             string defaultLine = defaultReference + "," + defaultNumberToHide;
 
