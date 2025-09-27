@@ -28,7 +28,7 @@ public class Video
 
     public string GetDisplayText()
     {
-        string returnText = $"Title: {_title}\nPosted by: {_author}\nLength in seconds: {_length}\n";
+        string returnText = $"Title: {_title}\nPosted by: {_author}\nLength in seconds: {_length}\nNumber of Comments: {_comments.Count}\n";
         foreach (Comment comment in _comments)
         {
             returnText += $"\n{comment.GetDisplayText()}\n";
