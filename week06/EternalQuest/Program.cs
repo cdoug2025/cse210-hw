@@ -1,9 +1,11 @@
+//I added a kind of leveling system that displays a title depending on how many points you have
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the EternalQuest Project.");
+        GoalManager goalManager = new();
+        goalManager.Start();
     }
 }
